@@ -1465,6 +1465,9 @@
   @media (max-width: 600px) {
     .page-hero { padding: 120px 20px 50px; }
   }
+
+  /* Force all content visible on inner pages */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
 </style>
 </head>
 <body>
@@ -1620,7 +1623,25 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  // Countdown Timer
+  (function() {
+    var targetDate = new Date('2026-04-25T10:00:00+05:30').getTime();
+    function updateCountdown() {
+      var now = new Date().getTime();
+      var diff = targetDate - now;
+      if (diff <= 0) return;
+      var d = Math.floor(diff / (1000*60*60*24));
+      var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      var s = Math.floor((diff % (1000*60)) / 1000);
+      var setEl = function(id, v) { var e = document.getElementById(id); if(e) e.textContent = String(v).padStart(2, '0'); };
+      setEl('cd-days', d); setEl('cd-hours', h); setEl('cd-mins', m); setEl('cd-secs', s);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  })();
+</script><script>
   function toggleTheme() {
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
