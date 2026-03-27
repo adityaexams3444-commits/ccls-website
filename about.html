@@ -28,29 +28,29 @@
   body { font-family:'Libre Franklin',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-weight:300; }
 
   /* NAV */
-  nav { position:fixed; top:0; width:100%; z-index:1000; background:#1A1A2E;
-    border-bottom:1px solid rgba(255,255,255,0.06); }
+  nav { position:fixed; top:0; width:100%; z-index:1000; background:#FFFFFF;
+    border-bottom:1px solid #E8E8E0; }
   .nav-inner { max-width:1400px; margin:0 auto; padding:0 50px; height:90px;
     display:flex; align-items:center; justify-content:space-between; }
   .nav-brand { display:flex; align-items:center; gap:16px; text-decoration:none; }
   .nav-logo-img { height:48px; width:auto; }
   .nav-brand-text { display:flex; flex-direction:column; line-height:1.15; }
-  .nav-brand-text span:first-child { font-family:'DM Serif Display',serif; font-size:1.15rem; font-weight:400; color:#fff; }
-  .nav-brand-text span:last-child { font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+  .nav-brand-text span:first-child { font-family:'DM Serif Display',serif; font-size:1.15rem; font-weight:400; color:#1A1A2E; }
+  .nav-brand-text span:last-child { font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#6B6B80; }
   .nav-links { display:flex; gap:28px; list-style:none; align-items:center; }
-  .nav-links a { text-decoration:none; color:rgba(255,255,255,0.55); font-size:0.78rem; font-weight:400;
+  .nav-links a { text-decoration:none; color:#6B6B80; font-size:0.78rem; font-weight:400;
     letter-spacing:0.04em; text-transform:uppercase; transition:color var(--transition); }
-  .nav-links a:hover, .nav-links a.active { color:#fff; }
-  .nav-social { display:flex; gap:14px; margin-left:22px; padding-left:22px; border-left:1px solid rgba(255,255,255,0.12); }
-  .nav-social a { color:rgba(255,255,255,0.45); transition:color var(--transition); display:flex; }
-  .nav-social a:hover { color:#fff; }
+  .nav-links a:hover, .nav-links a.active { color:#1A1A2E; }
+  .nav-social { display:flex; gap:14px; margin-left:22px; padding-left:22px; border-left:1px solid #E8E8E0; }
+  .nav-social a { color:#6B6B80; transition:color var(--transition); display:flex; }
+  .nav-social a:hover { color:#1A1A2E; }
   .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:5px; }
-  .hamburger span { width:22px; height:1.5px; background:#fff; transition:all 0.3s; }
-  .mobile-menu { position:fixed; top:90px; left:0; width:100%; background:#1A1A2E;
-    border-bottom:1px solid rgba(255,255,255,0.06); padding:24px 50px; display:none; flex-direction:column; gap:16px; z-index:999; }
+  .hamburger span { width:22px; height:1.5px; background:#1A1A2E; transition:all 0.3s; }
+  .mobile-menu { position:fixed; top:90px; left:0; width:100%; background:#FFFFFF;
+    border-bottom:1px solid #E8E8E0; padding:24px 50px; display:none; flex-direction:column; gap:16px; z-index:999; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
   .mobile-menu.open { display:flex; }
-  .mobile-menu a { text-decoration:none; color:rgba(255,255,255,0.55); font-size:0.85rem; letter-spacing:0.04em;
-    text-transform:uppercase; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .mobile-menu a { text-decoration:none; color:#6B6B80; font-size:0.85rem; letter-spacing:0.04em;
+    text-transform:uppercase; padding:8px 0; border-bottom:1px solid #E8E8E0; }
 
   /* HERO */
   .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
@@ -416,12 +416,11 @@
           </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="faculty-team.html">Faculty & Team</a></li>
+      <li><a href="about.html" class=active class="active">About</a></li>
+      <li><a href="faculty-team.html">Organogram</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="partners.html">Partners</a></li>
-      <li><a href="publications.html">Publications</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><div class="nav-social">
         <a href="https://www.instagram.com/" target="_blank"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
@@ -438,11 +437,10 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="about.html" class="active" onclick="closeMenu()">About</a>
-  <a href="faculty-team.html" onclick="closeMenu()">Faculty & Team</a>
+  <a href="faculty-team.html" onclick="closeMenu()">Organogram</a>
   <a href="events.html" onclick="closeMenu()">Events</a>
   <a href="articles.html" onclick="closeMenu()">Articles</a>
   <a href="partners.html" onclick="closeMenu()">Partners</a>
-  <a href="publications.html" onclick="closeMenu()">Publications</a>
   <a href="contact.html" onclick="closeMenu()">Contact Us</a>
 </div>
 
@@ -494,7 +492,7 @@
         <p>Campus Law Centre, University of Delhi</p>
       </div>
       <div class="footer-links">
-        <div class="footer-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="faculty-team.html">Faculty &amp; Team</a></div>
+        <div class="footer-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="faculty-team.html">Organogram</a></div>
         <div class="footer-col"><h4>Connect</h4><a href="https://www.instagram.com/" target="_blank">Instagram</a><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a><a href="https://www.youtube.com/" target="_blank">YouTube</a><a href="/cdn-cgi/l/email-protection#5c3f3f302f1c3f303f723829723d3f723532">Email Us</a></div>
         <div class="footer-col"><h4>Resources</h4><a href="articles.html">Articles</a><a href="publications.html">Publications</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a></div>
       </div>
