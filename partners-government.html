@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Our Partners &mdash; CCLS | Corporate &amp; Commercial Law Society</title>
+<title>Government Partners &mdash; CCLS | Corporate &amp; Commercial Law Society</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -378,111 +378,81 @@
   @media(max-width:600px){ .sp-grid{grid-template-columns:1fr} }
 
 
-  /* === PARTNERS TREE PAGE === */
-  .partners-hero {
-    margin-top:90px; padding:80px 40px 50px; text-align:center; background:#F5F5F0;
+  /* === PARTNER DETAIL PAGE === */
+  .pdetail-hero { margin-top:90px; padding:70px 40px 50px; text-align:center; }
+  .pdetail-hero.gov-bg { background:linear-gradient(135deg,#eef0ff,#f5f5f0); }
+  .pdetail-hero.acad-bg { background:linear-gradient(135deg,#fdf8ec,#f5f5f0); }
+  .pdetail-hero.ind-bg { background:linear-gradient(135deg,#f0f0f5,#f5f5f0); }
+  .pdetail-hero.know-bg { background:linear-gradient(135deg,#fef3ee,#f5f5f0); }
+
+  .pdetail-hero .breadcrumb {
+    font-size:0.7rem; color:#999; margin-bottom:18px; letter-spacing:0.03em;
   }
-  .partners-hero h1 {
-    font-family:'DM Serif Display',serif; font-size:clamp(2rem,4vw,3rem);
+  .pdetail-hero .breadcrumb a { color:#999; text-decoration:none; }
+  .pdetail-hero .breadcrumb a:hover { color:var(--accent); }
+
+  .pdetail-hero h1 {
+    font-family:'DM Serif Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem);
     font-weight:400; color:#3333CC; margin-bottom:14px;
   }
-  .partners-hero p {
-    font-size:0.95rem; color:#777; max-width:600px; margin:0 auto; line-height:1.7;
+  .pdetail-hero p {
+    font-size:0.92rem; color:#777; max-width:620px; margin:0 auto; line-height:1.7;
   }
 
-  /* Tree Container */
-  .tree-section {
-    padding:60px 40px 100px; max-width:1000px; margin:0 auto;
+  /* Section headings */
+  .pdetail-section { padding:50px 40px; max-width:1100px; margin:0 auto; }
+  .pdetail-section h2 {
+    font-family:'DM Serif Display',serif; font-size:1.5rem; font-weight:400;
+    color:var(--accent); margin-bottom:8px;
+  }
+  .pdetail-section .section-line {
+    width:50px; height:2px; background:var(--gold); margin-bottom:28px;
+  }
+  .pdetail-section > p {
+    font-size:0.88rem; color:#888; margin-bottom:28px; line-height:1.7;
   }
 
-  /* Root Node */
-  .tree-root {
-    text-align:center; margin-bottom:0;
+  /* Partner / Sponsor Cards Grid */
+  .pcard-grid {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px;
   }
-  .tree-root-node {
-    display:inline-block; padding:18px 44px; background:var(--accent);
-    color:#fff; font-family:'DM Serif Display',serif; font-size:1.3rem;
-    font-weight:400; border-radius:6px; position:relative;
-    box-shadow:0 4px 16px rgba(26,26,46,0.18);
+  .pcard {
+    background:#fff; border:1px solid #eaeaea; border-radius:8px; padding:28px 24px;
+    transition:all 0.3s; position:relative; overflow:hidden;
   }
-
-  /* Vertical trunk line from root */
-  .tree-trunk {
-    width:2px; height:50px; background:var(--accent); margin:0 auto;
-  }
-
-  /* Horizontal connector bar */
-  .tree-connector {
-    position:relative; height:2px; background:var(--accent);
-    max-width:800px; margin:0 auto;
-  }
-
-  /* Vertical drop lines */
-  .tree-branches {
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
-    max-width:800px; margin:0 auto;
-  }
-  .tree-branch {
-    display:flex; flex-direction:column; align-items:center;
-  }
-  .tree-branch-line {
-    width:2px; height:40px; background:var(--accent);
-  }
-
-  /* Leaf nodes (clickable cards) */
-  .tree-leaf {
-    display:block; text-decoration:none; text-align:center;
-    padding:28px 16px; background:#fff; border:1px solid #eaeaea;
-    border-radius:8px; transition:all 0.35s ease; width:100%; max-width:185px;
-    position:relative;
-  }
-  .tree-leaf:hover {
-    box-shadow:0 8px 28px rgba(26,26,46,0.12); transform:translateY(-4px);
-    border-color:var(--gold);
-  }
-  .tree-leaf-icon {
-    width:52px; height:52px; border-radius:50%;
+  .pcard:hover { box-shadow:0 6px 24px rgba(0,0,0,0.07); transform:translateY(-2px); }
+  .pcard-logo {
+    width:100%; height:80px; background:#F5F5F0; border-radius:6px;
     display:flex; align-items:center; justify-content:center;
-    margin:0 auto 14px; font-size:1.5rem;
+    margin-bottom:18px; font-family:'DM Serif Display',serif;
+    font-size:1.5rem; color:#ccc;
   }
-  .tree-leaf-icon.gov { background:rgba(51,51,204,0.1); color:#3333CC; }
-  .tree-leaf-icon.acad { background:rgba(200,169,81,0.15); color:#C8A951; }
-  .tree-leaf-icon.ind { background:rgba(26,26,46,0.08); color:#1A1A2E; }
-  .tree-leaf-icon.know { background:rgba(212,85,26,0.1); color:#D4551A; }
+  .pcard h4 {
+    font-family:'DM Serif Display',serif; font-size:1rem; font-weight:400;
+    color:var(--accent); margin-bottom:6px;
+  }
+  .pcard p { font-size:0.78rem; color:#999; line-height:1.6; }
+  .pcard .pcard-tag {
+    display:inline-block; margin-top:12px; padding:3px 10px;
+    font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase;
+    border-radius:20px; color:#fff;
+  }
+  .pcard .tag-partner { background:var(--accent); }
+  .pcard .tag-sponsor { background:var(--gold); }
 
-  .tree-leaf h3 {
-    font-family:'DM Serif Display',serif; font-size:0.92rem; font-weight:400;
-    color:var(--accent); margin-bottom:6px; line-height:1.3;
-  }
-  .tree-leaf p {
-    font-size:0.68rem; color:#999; line-height:1.5;
-  }
-  .tree-leaf .arrow {
-    display:inline-block; margin-top:12px; font-size:0.7rem; color:var(--gold);
-    font-weight:500; letter-spacing:0.06em; text-transform:uppercase;
-    transition:color 0.3s;
-  }
-  .tree-leaf:hover .arrow { color:#D4551A; }
+  /* Divider */
+  .pdetail-divider { border:none; border-top:1px solid #eee; margin:0 40px; max-width:1020px; }
 
-  /* CTA bottom */
-  .partners-cta { text-align:center; padding:0 40px 80px; }
-  .partners-cta p { font-size:0.92rem; color:#777; margin-bottom:20px; }
-  .partners-cta .btn {
-    display:inline-block; padding:14px 32px; background:var(--accent); color:#fff;
-    text-decoration:none; font-size:0.78rem; letter-spacing:0.06em;
-    text-transform:uppercase; transition:background 0.3s; border-radius:4px;
+  /* Back link */
+  .back-link {
+    display:inline-flex; align-items:center; gap:6px; margin-bottom:0;
+    font-size:0.78rem; color:var(--accent); text-decoration:none;
+    font-weight:500; transition:color 0.3s;
   }
-  .partners-cta .btn:hover { background:#2D2D5E; }
+  .back-link:hover { color:var(--gold); }
 
-  /* Responsive */
-  @media(max-width:768px) {
-    .tree-connector { display:none; }
-    .tree-branches {
-      grid-template-columns:1fr; gap:0; max-width:220px;
-    }
-    .tree-branch-line { height:30px; }
-    .tree-trunk { height:30px; }
-    .tree-leaf { max-width:100%; }
+  @media(max-width:600px) {
+    .pcard-grid { grid-template-columns:1fr; }
   }
 
 </style>
@@ -527,72 +497,72 @@
 </div>
 
 
-<div class="partners-hero">
-  <h1>Our Partners</h1>
-  <p>The Corporate &amp; Commercial Law Society collaborates with leading institutions across government, academia, industry, and knowledge sectors to advance legal education and professional development.</p>
+<div class="pdetail-hero gov-bg">
+  <div class="breadcrumb">
+    <a href="partners.html">Our Partners</a> &nbsp;/&nbsp; Government Partners
+  </div>
+  <h1>&#127963; Government Partners</h1>
+  <p>CCLS partners with government ministries, regulatory bodies, and public institutions to bridge the gap between legal policy and practice.</p>
 </div>
 
-<div class="tree-section">
-  <!-- Root Node -->
-  <div class="tree-root">
-    <div class="tree-root-node">Our Partners</div>
-  </div>
+<div class="pdetail-section">
+  <a href="partners.html" class="back-link">&larr; Back to All Partners</a>
+</div>
 
-  <!-- Trunk -->
-  <div class="tree-trunk"></div>
-
-  <!-- Horizontal Connector -->
-  <div class="tree-connector"></div>
-
-  <!-- 4 Branches -->
-  <div class="tree-branches">
-
-    <div class="tree-branch">
-      <div class="tree-branch-line"></div>
-      <a href="partners-government.html" class="tree-leaf">
-        <div class="tree-leaf-icon gov">&#127963;</div>
-        <h3>Government Partners</h3>
-        <p>Ministries, regulatory bodies &amp; public institutions</p>
-        <span class="arrow">Explore &rarr;</span>
-      </a>
-    </div>
-
-    <div class="tree-branch">
-      <div class="tree-branch-line"></div>
-      <a href="partners-academic.html" class="tree-leaf">
-        <div class="tree-leaf-icon acad">&#127891;</div>
-        <h3>Academic Partners</h3>
-        <p>Universities, law schools &amp; research centres</p>
-        <span class="arrow">Explore &rarr;</span>
-      </a>
-    </div>
-
-    <div class="tree-branch">
-      <div class="tree-branch-line"></div>
-      <a href="partners-industry.html" class="tree-leaf">
-        <div class="tree-leaf-icon ind">&#127970;</div>
-        <h3>Industry Partners</h3>
-        <p>Law firms, corporations &amp; professional services</p>
-        <span class="arrow">Explore &rarr;</span>
-      </a>
-    </div>
-
-    <div class="tree-branch">
-      <div class="tree-branch-line"></div>
-      <a href="partners-knowledge.html" class="tree-leaf">
-        <div class="tree-leaf-icon know">&#128218;</div>
-        <h3>Knowledge Partners</h3>
-        <p>Think tanks, publishers &amp; legal databases</p>
-        <span class="arrow">Explore &rarr;</span>
-      </a>
-    </div>
-
+<div class="pdetail-section">
+  <h2>Partners</h2>
+  <div class="section-line"></div>
+  <p>Our valued partners who collaborate with CCLS to advance legal education and professional excellence.</p>
+  <div class="pcard-grid">
+    
+      <div class="pcard">
+        <div class="pcard-logo">MCA</div>
+        <h4>Ministry of Corporate Affairs</h4>
+        <p>Collaboration on corporate governance initiatives and regulatory awareness programmes.</p>
+        <span class="pcard-tag tag-partner">Partner</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-logo">NCLAT</div>
+        <h4>National Company Law Appellate Tribunal</h4>
+        <p>Partnership for moot court competitions and tribunal practice workshops.</p>
+        <span class="pcard-tag tag-partner">Partner</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-logo">IBBI</div>
+        <h4>Insolvency &amp; Bankruptcy Board of India</h4>
+        <p>Joint seminars on insolvency resolution and regulatory frameworks.</p>
+        <span class="pcard-tag tag-partner">Partner</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-logo">SEBI</div>
+        <h4>Securities &amp; Exchange Board of India</h4>
+        <p>Knowledge exchange on securities regulation and market compliance.</p>
+        <span class="pcard-tag tag-partner">Partner</span>
+      </div>
   </div>
 </div>
 
-<div class="partners-cta">
-  <p>Interested in partnering with CCLS? We&rsquo;d love to collaborate.</p>
-  <a href="contact.html" class="btn">Become a Partner</a>
+<hr class="pdetail-divider">
+
+<div class="pdetail-section">
+  <h2>Sponsors</h2>
+  <div class="section-line"></div>
+  <p>Generous sponsors who support CCLS initiatives, events, and publications.</p>
+  <div class="pcard-grid">
+    
+      <div class="pcard">
+        <div class="pcard-logo">NITI</div>
+        <h4>NITI Aayog</h4>
+        <p>Supporting policy research and legal innovation initiatives at CCLS.</p>
+        <span class="pcard-tag tag-sponsor">Sponsor</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-logo">DLA</div>
+        <h4>Delhi Legal Authority</h4>
+        <p>Sponsoring legal aid clinics and access-to-justice programmes.</p>
+        <span class="pcard-tag tag-sponsor">Sponsor</span>
+      </div>
+  </div>
 </div>
 
 
